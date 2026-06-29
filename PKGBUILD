@@ -14,7 +14,7 @@ makedepends=(
 )
 options=('!strip')
 source=("linux-$pkgver-${_commit:0:10}.tar.gz::https://github.com/raspberrypi/linux/archive/${_commit}.tar.gz"
-        $cmdline.txt
+        #cmdline.txt
         #config.txt
         "patches.zip"
         "overlays.zip"
@@ -94,8 +94,11 @@ _package() {
     coreutils
     firmware-raspberrypi
     kmod
-    'mkinitcpio>=0.7'
-    raspberrypi-bootloader
+    dracut
+    #'mkinitcpio>=0.7'
+    #raspberrypi-bootloader
+    rpi5-uefi
+    rpi4-uefi 
   )
   optdepends=(
     'linux-firmware: firmware images needed for some devices'
@@ -115,8 +118,8 @@ _package() {
   )
   install=linux-rpi-clockwork.install
   backup=(
-    boot/config.txt
-    boot/cmdline.txt
+    #boot/config.txt
+    #boot/cmdline.txt
   )
 
   cd "${srcdir}/${_srcname}"
