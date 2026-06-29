@@ -1,3 +1,5 @@
+#https://github.com/NumberOneGit/rpi5-uefi
+
 _commit=c2ad96e1f0a8e5f6b4fab8cfd4534b115eb83394
 _srcname=linux-${_commit}
 pkgver=7.0.9
