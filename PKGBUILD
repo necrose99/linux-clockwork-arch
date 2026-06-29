@@ -14,8 +14,8 @@ makedepends=(
 )
 options=('!strip')
 source=("linux-$pkgver-${_commit:0:10}.tar.gz::https://github.com/raspberrypi/linux/archive/${_commit}.tar.gz"
-        cmdline.txt
-        config.txt
+        $cmdline.txt
+        #config.txt
         "patches.zip"
         "overlays.zip"
         "drivers.zip"
